@@ -35,15 +35,15 @@ Developed from <https://access.redhat.com/articles/5683981>
         an RGW endpoint.
         > \
         > sudo python3 ceph-external-cluster-details-exporter.py
-        > \--rbd-data-pool-name test2_rbd \--rgw-endpoint
+        --rbd-data-pool-name test2_rbd \--rgw-endpoint
         > 192.168.100.202:80 -o external_cluster_details
 
     c.  Put script output into file named external_cluster_details on
-        > OCP admin node
+        OCP admin node
 
     d.  Create rook-ceph-external-cluster-details secret from file
         > oc create secret generic rook-ceph-external-cluster-details
-        > \--from-file=external_cluster_details -n
+        --from-file=external_cluster_details -n
         > openshift-storage
 
 6.  Create Storage System and Storage cluster\

@@ -5,9 +5,11 @@ Developed from <https://access.redhat.com/articles/5683981>
     > oc create -f YAML/odf-namespace.yaml
 
 2.  Create the openshift-storage-operatorgroup for the Operator
+
     > oc create -f YAML/odf-operatorgroup.yaml
 
 3.  Subscribe to the odf-operator
+
     > oc create -f YAML/odf-sub.yaml
 
 4.  Enable console plugin
@@ -21,13 +23,13 @@ Developed from <https://access.redhat.com/articles/5683981>
     a.  The only location for the python script next referenced is in
         the ODF GUI on OCP.
         
-        i.  Under Installed Operators click on Openshift Data foundation
+    i.  Under Installed Operators click on Openshift Data foundation
 
-        ii. Choose Create StorageSystem
+    ii. Choose Create StorageSystem
 
-        iii. Select Connect an external storage platform and click Next
+    iii. Select Connect an external storage platform and click Next
 
-        iv. Click on the linked text Download script
+    iv. Click on the linked text Download script
 
     b.  Run script as root on RHCS cluster, choose an appropriate pool
         name, note that you need to create the RBD pool in advance of
@@ -48,7 +50,8 @@ Developed from <https://access.redhat.com/articles/5683981>
         --from-file=external_cluster_details -n
         openshift-storage
 
-6.  Create Storage System and Storage cluster\
+6.  Create Storage System and Storage cluster
+
     > oc create -f YAML/odf-storage-system.yaml
 
 7.  Set default storage class (optional if you already have a default

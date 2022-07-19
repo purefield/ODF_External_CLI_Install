@@ -28,10 +28,10 @@ Developed from <https://access.redhat.com/articles/5683981>
 
         iv. Click on the linked text Download script
 
-    b.  Run script as root on RHCS cluster, choose an appropriate pool
-        name, note that you need to create the RBD pool in advance of
-        running the script (do not forget to set application \"rbd\"
-        on the RBD pool or it will warn). You will also need to know
+    b.  Run script as root on RHCS cluster, choose an appropriate pool\
+        name, note that you need to create the RBD pool in advance of\
+        running the script (do not forget to set application \"rbd\"\
+        on the RBD pool or it will warn). You will also need to know\
         an RGW endpoint.\
         > \
         > sudo python3 ceph-external-cluster-details-exporter.py
@@ -49,7 +49,7 @@ Developed from <https://access.redhat.com/articles/5683981>
 6.  Create Storage System and Storage cluster\
     > oc create -f YAML/odf-storage-system.yaml
 
-7.  Set default storage class (optional if you already have a default
+7.  Set default storage class (optional if you already have a default\
     storage class set)\
     > \
     > oc patch storageclass ocs-external-storagecluster-ceph-rbd -p

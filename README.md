@@ -18,7 +18,7 @@ Developed from <https://access.redhat.com/articles/5683981>
 5.  Create external cluster secret
 
     a.  The only location for the python script next referenced is in
-        > the ODF GUI on OCP.
+        the ODF GUI on OCP.
 
         i.  Under Installed Operators click on Openshift Data foundation
 
@@ -29,10 +29,10 @@ Developed from <https://access.redhat.com/articles/5683981>
         iv. Click on the linked text Download script
 
     b.  Run script as root on RHCS cluster, choose an appropriate pool
-        > name, note that you need to create the RBD pool in advance of
-        > running the script (do not forget to set application \"rbd\"
-        > on the RBD pool or it will warn). You will also need to know
-        > an RGW endpoint.\
+        name, note that you need to create the RBD pool in advance of
+        running the script (do not forget to set application \"rbd\"
+        on the RBD pool or it will warn). You will also need to know
+        an RGW endpoint.\
         > \
         > sudo python3 ceph-external-cluster-details-exporter.py
         > \--rbd-data-pool-name test2_rbd \--rgw-endpoint
@@ -50,7 +50,7 @@ Developed from <https://access.redhat.com/articles/5683981>
     > oc create -f YAML/odf-storage-system.yaml
 
 7.  Set default storage class (optional if you already have a default
-    > storage class set)\
+    storage class set)\
     > \
     > oc patch storageclass ocs-external-storagecluster-ceph-rbd -p
     > \'{\"metadata\": {\"annotations\":

@@ -2,7 +2,7 @@ Developed from <https://access.redhat.com/articles/5683981>
 
 1.  Create the openshift-storage namespace
 
->    oc create -f YAML/odf-namespace.yaml
+	>    oc create -f YAML/odf-namespace.yaml
 
 2.  Create the openshift-storage-operatorgroup for the Operator
 

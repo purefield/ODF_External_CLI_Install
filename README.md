@@ -24,15 +24,15 @@ Developed from [
 
 5.  [Create external cluster secret]
 
-  1.  [The only location for the python script next referenced is in the
+    1.  [The only location for the python script next referenced is in the
     ODF GUI on OCP. ]
 
-    1.  [Under Installed Operators click on Openshift Data foundation]
-    2.  [Choose Create StorageSystem]
-    3.  [Select Connect an external storage platform and click Next]
-    4.  [Click on the linked text Download script]
+      1.  [Under Installed Operators click on Openshift Data foundation]
+      2.  [Choose Create StorageSystem]
+      3.  [Select Connect an external storage platform and click Next]
+      4.  [Click on the linked text Download script]
 
-  2.   Run script as root on RHCS cluster, choose an appropriate pool
+    2.   Run script as root on RHCS cluster, choose an appropriate pool
     name, note that you need to create the RBD pool in advance of
     running the script (do not forget to set application \"rbd\" on the
     RBD pool or it will warn). You will also need to know an RGW
@@ -44,7 +44,7 @@ Developed from [
 
 
 
-  3.  Put script output into file named [external_cluster_details on OCP
+    3.  Put script output into file named [external_cluster_details on OCP
     admin node]
 4.  Create [rook-ceph-external-cluster-details]{.c5}  secret from file\
     [oc create secret generic rook-ceph-external-cluster-details

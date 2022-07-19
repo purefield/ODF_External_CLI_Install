@@ -6,15 +6,15 @@ Developed from <https://access.redhat.com/articles/5683981>
 
 2.  Create the openshift-storage-operatorgroup for the Operator
 
-	> oc create -f YAML/odf-operatorgroup.yaml
+	>         oc create -f YAML/odf-operatorgroup.yaml
 
 3.  Subscribe to the odf-operator
 
-	> oc create -f YAML/odf-sub.yaml
+	>         oc create -f YAML/odf-sub.yaml
 
 4.  Enable console plugin
 
-	> oc patch console.operator cluster -n openshift-storage --type
+	>         oc patch console.operator cluster -n openshift-storage --type
     json -p \'\[{\"op\": \"add\", \"path\": \"/spec/plugins\",
     \"value\": \[\"odf-console\"\]}\]\'
 
@@ -52,13 +52,13 @@ Developed from <https://access.redhat.com/articles/5683981>
 	
 6.  Create Storage System and Storage cluster
 
-	> oc create -f YAML/odf-storage-system.yaml
+	>         oc create -f YAML/odf-storage-system.yaml
 
 7.  Set default storage class (optional if you already have a default
     storage class set)
 
-	> oc patch storageclass ocs-external-storagecluster-ceph-rbd -p
-	> \'{\"metadata\": {\"annotations\":
-	> {\"storageclass.kubernetes.io/is-default-class\": \"true\"}}}\'
+	>         oc patch storageclass ocs-external-storagecluster-ceph-rbd -p
+	>         \'{\"metadata\": {\"annotations\":
+	>         {\"storageclass.kubernetes.io/is-default-class\": \"true\"}}}\'
 
 8.  Verify

@@ -23,14 +23,14 @@ Developed from <https://access.redhat.com/articles/5683981>
     1.  The only location for the python script next referenced is in
         the ODF GUI on OCP.
         
-        1.  Under Installed Operators click on Openshift Data foundation
-
-        2. Choose Create StorageSystem
-
-        3. Select Connect an external storage platform and click Next
-
-        4. Click on the linked text Download script
-
+		1.  Under Installed Operators click on Openshift Data foundation
+		
+		2. Choose Create StorageSystem
+		
+		3. Select Connect an external storage platform and click Next
+		
+		4. Click on the linked text Download script
+		
     2.  Run script as root on RHCS cluster, choose an appropriate pool
         name, note that you need to create the RBD pool in advance of
         running the script (do not forget to set application \"rbd\"

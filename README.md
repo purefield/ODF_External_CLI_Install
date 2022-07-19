@@ -28,10 +28,10 @@ Developed from <https://access.redhat.com/articles/5683981>
 
         iv. Click on the linked text Download script
 
-    b.  Run script as root on RHCS cluster, choose an appropriate pool\
-        name, note that you need to create the RBD pool in advance of\
-        running the script (do not forget to set application \"rbd\"\
-        on the RBD pool or it will warn). You will also need to know\
+    b.  Run script as root on RHCS cluster, choose an appropriate pool
+        name, note that you need to create the RBD pool in advance of
+        running the script (do not forget to set application \"rbd\"
+        on the RBD pool or it will warn). You will also need to know
         an RGW endpoint.\
         > \
         > sudo python3 ceph-external-cluster-details-exporter.py

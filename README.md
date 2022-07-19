@@ -11,7 +11,7 @@ Developed from <https://access.redhat.com/articles/5683981>
 
 4.  Enable console plugin
 
-    oc patch console.operator cluster -n openshift-storage --type
+    > oc patch console.operator cluster -n openshift-storage --type
     json -p \'\[{\"op\": \"add\", \"path\": \"/spec/plugins\",
     \"value\": \[\"odf-console\"\]}\]\'
 

@@ -1,6 +1,7 @@
 Developed from <https://access.redhat.com/articles/5683981>
 
 1.  Create the openshift-storage namespace
+
     > oc create -f YAML/odf-namespace.yaml
 
 2.  Create the openshift-storage-operatorgroup for the Operator
@@ -19,6 +20,7 @@ Developed from <https://access.redhat.com/articles/5683981>
 
     a.  The only location for the python script next referenced is in
         the ODF GUI on OCP.
+        
         i.  Under Installed Operators click on Openshift Data foundation
 
         ii. Choose Create StorageSystem

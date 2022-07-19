@@ -10,10 +10,10 @@ Developed from <https://access.redhat.com/articles/5683981>
     > oc create -f YAML/odf-sub.yaml
 
 4.  Enable console plugin
-    > \
-    > oc patch console.operator cluster -n openshift-storage --type
-    > json -p \'\[{\"op\": \"add\", \"path\": \"/spec/plugins\",
-    > \"value\": \[\"odf-console\"\]}\]\'
+
+    oc patch console.operator cluster -n openshift-storage --type
+    json -p \'\[{\"op\": \"add\", \"path\": \"/spec/plugins\",
+    \"value\": \[\"odf-console\"\]}\]\'
 
 5.  Create external cluster secret
 

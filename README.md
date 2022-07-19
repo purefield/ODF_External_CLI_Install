@@ -20,35 +20,35 @@ Developed from <https://access.redhat.com/articles/5683981>
 
 5.  Create external cluster secret
 
-    a.  The only location for the python script next referenced is in
+    1.  The only location for the python script next referenced is in
         the ODF GUI on OCP.
         
-        i.  Under Installed Operators click on Openshift Data foundation
+        1.  Under Installed Operators click on Openshift Data foundation
 
-        ii. Choose Create StorageSystem
+        2. Choose Create StorageSystem
 
-        iii. Select Connect an external storage platform and click Next
+        3. Select Connect an external storage platform and click Next
 
-        iv. Click on the linked text Download script
+        4. Click on the linked text Download script
 
-    b.  Run script as root on RHCS cluster, choose an appropriate pool
+    2.  Run script as root on RHCS cluster, choose an appropriate pool
         name, note that you need to create the RBD pool in advance of
         running the script (do not forget to set application \"rbd\"
         on the RBD pool or it will warn). You will also need to know
         an RGW endpoint.
 
-        sudo python3 ceph-external-cluster-details-exporter.py
-        --rbd-data-pool-name test2_rbd --rgw-endpoint
-        192.168.100.202:80 -o external_cluster_details
+>         sudo python3 ceph-external-cluster-details-exporter.py
+>         --rbd-data-pool-name test2_rbd --rgw-endpoint
+>         192.168.100.202:80 -o external_cluster_details
 
-    c.  Put script output into file named external_cluster_details on
+    3.  Put script output into file named external_cluster_details on
         OCP admin node
 
-    d.  Create rook-ceph-external-cluster-details secret from file
+    4.  Create rook-ceph-external-cluster-details secret from file
     
-        oc create secret generic rook-ceph-external-cluster-details
-        --from-file=external_cluster_details -n
-        openshift-storage
+>         oc create secret generic rook-ceph-external-cluster-details
+>         --from-file=external_cluster_details -n
+>         openshift-storage
 
 6.  Create Storage System and Storage cluster
 

@@ -34,7 +34,7 @@ Developed from <https://access.redhat.com/articles/5683981>
         on the RBD pool or it will warn). You will also need to know
         an RGW endpoint.
 
-        > sudo python3 ceph-external-cluster-details-exporter.py
+        sudo python3 ceph-external-cluster-details-exporter.py
         --rbd-data-pool-name test2_rbd --rgw-endpoint
         192.168.100.202:80 -o external_cluster_details
 
@@ -42,7 +42,8 @@ Developed from <https://access.redhat.com/articles/5683981>
         OCP admin node
 
     d.  Create rook-ceph-external-cluster-details secret from file
-        > oc create secret generic rook-ceph-external-cluster-details
+    
+        oc create secret generic rook-ceph-external-cluster-details
         --from-file=external_cluster_details -n
         openshift-storage
 

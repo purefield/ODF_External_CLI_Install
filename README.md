@@ -33,7 +33,7 @@ Developed from <https://access.redhat.com/articles/5683981>
         running the script (do not forget to set application \"rbd\"
         on the RBD pool or it will warn). You will also need to know
         an RGW endpoint.
-        > \
+
         > sudo python3 ceph-external-cluster-details-exporter.py
         --rbd-data-pool-name test2_rbd --rgw-endpoint
         192.168.100.202:80 -o external_cluster_details
@@ -51,7 +51,7 @@ Developed from <https://access.redhat.com/articles/5683981>
 
 7.  Set default storage class (optional if you already have a default
     storage class set)
-    > \
+
     > oc patch storageclass ocs-external-storagecluster-ceph-rbd -p
     > \'{\"metadata\": {\"annotations\":
     > {\"storageclass.kubernetes.io/is-default-class\": \"true\"}}}\'

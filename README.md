@@ -11,7 +11,7 @@ Developed from <https://access.redhat.com/articles/5683981>
 
 4.  Enable console plugin
     > \
-    > oc patch console.operator cluster -n openshift-storage \--type
+    > oc patch console.operator cluster -n openshift-storage --type
     > json -p \'\[{\"op\": \"add\", \"path\": \"/spec/plugins\",
     > \"value\": \[\"odf-console\"\]}\]\'
 
@@ -35,8 +35,8 @@ Developed from <https://access.redhat.com/articles/5683981>
         an RGW endpoint.
         > \
         > sudo python3 ceph-external-cluster-details-exporter.py
-        --rbd-data-pool-name test2_rbd \--rgw-endpoint
-        > 192.168.100.202:80 -o external_cluster_details
+        --rbd-data-pool-name test2_rbd --rgw-endpoint
+        192.168.100.202:80 -o external_cluster_details
 
     c.  Put script output into file named external_cluster_details on
         OCP admin node
@@ -44,7 +44,7 @@ Developed from <https://access.redhat.com/articles/5683981>
     d.  Create rook-ceph-external-cluster-details secret from file
         > oc create secret generic rook-ceph-external-cluster-details
         --from-file=external_cluster_details -n
-        > openshift-storage
+        openshift-storage
 
 6.  Create Storage System and Storage cluster\
     > oc create -f YAML/odf-storage-system.yaml

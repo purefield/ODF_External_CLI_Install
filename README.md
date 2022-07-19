@@ -1,13 +1,13 @@
 Developed from <https://access.redhat.com/articles/5683981>
 
 1.  Create the openshift-storage namespace\
-    > oc create -f ODF-EXT/odf-namespace.yaml
+    > oc create -f YAML/odf-namespace.yaml
 
 2.  Create the openshift-storage-operatorgroup for the Operator\
-    > oc create -f ODF-EXT/odf-operatorgroup.yaml
+    > oc create -f YAML/odf-operatorgroup.yaml
 
 3.  Subscribe to the odf-operator\
-    > oc create -f ODF-EXT/odf-sub.yaml
+    > oc create -f YAML/odf-sub.yaml
 
 4.  Enable console plugin\
     > \
@@ -43,11 +43,11 @@ Developed from <https://access.redhat.com/articles/5683981>
 
     d.  Create rook-ceph-external-cluster-details secret from file\
         > oc create secret generic rook-ceph-external-cluster-details
-        > \--from-file=ODF-EXT/external_cluster_details -n
+        > \--from-file=external_cluster_details -n
         > openshift-storage
 
 6.  Create Storage System and Storage cluster\
-    > oc create -f ODF-EXT/odf-storage-system.yaml
+    > oc create -f YAML/odf-storage-system.yaml
 
 7.  Set default storage class (optional if you already have a default
     > storage class set)\

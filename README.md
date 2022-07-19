@@ -2,19 +2,19 @@ Developed from <https://access.redhat.com/articles/5683981>
 
 1.  Create the openshift-storage namespace
 
->oc create -f YAML/odf-namespace.yaml
+   >oc create -f YAML/odf-namespace.yaml
 
 2.  Create the openshift-storage-operatorgroup for the Operator
 
->oc create -f YAML/odf-operatorgroup.yaml
+   >oc create -f YAML/odf-operatorgroup.yaml
 
 3.  Subscribe to the odf-operator
 
->oc create -f YAML/odf-sub.yaml
+   >oc create -f YAML/odf-sub.yaml
 
 4.  Enable console plugin
 
->oc patch console.operator cluster -n openshift-storage --type
+   >oc patch console.operator cluster -n openshift-storage --type
     json -p \'\[{\"op\": \"add\", \"path\": \"/spec/plugins\",
     \"value\": \[\"odf-console\"\]}\]\'
 
